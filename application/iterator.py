@@ -20,17 +20,11 @@ class MyIterator:
         self.i += 1
         if self.i == len(self.colors):
             raise StopIteration
-        # while self.colors:
-
         if isinstance(self.colors, list):
-           
             return self.colors[self.i]
 
 
-# for i in MyIterator(nested_list):
-    # print(i)
-    # for j in i:
-#         print(j)
+
 
 
     
