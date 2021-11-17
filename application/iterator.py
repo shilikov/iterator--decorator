@@ -6,8 +6,8 @@ from data.data import nested_list
 
 class MyIterator:
 
-    def __init__(self, colors) -> None:
-        self.colors = sum(colors, [])
+    def __init__(self, lst) -> None:
+        self.lst = sum(lst, [])
         
 
     def __iter__(self):
@@ -18,10 +18,10 @@ class MyIterator:
     def __next__(self):
         
         self.i += 1
-        if self.i == len(self.colors):
+        if self.i == len(self.lst):
             raise StopIteration
-        if isinstance(self.colors, list):
-            return self.colors[self.i]
+        if isinstance(self.lst, list):
+            return self.lst[self.i]
 
 
 
