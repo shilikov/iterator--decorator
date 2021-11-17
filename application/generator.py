@@ -1,5 +1,3 @@
-from data.data import nested_list_1, nested_list
-
 
 
 
@@ -41,3 +39,24 @@ def recursive_generator(lst):
 
 # for i in recursive_generator(nested_list_1):
 #     print(i)
+
+
+
+def flat_generator(my_list):
+    for sub_list in my_list:
+        for item in sub_list:
+            yield item
+
+
+
+def flat_generator_v2(multi_list):
+    for item in multi_list:
+        if isinstance(item, list):
+            # если элемент списка оказывается списком то оборачиваем в этот же генратор
+            # такой прием называется рекурсия
+            for sub_item in flat_generator_v2(item):
+                yield sub_item
+        else:
+            yield item
+
+
