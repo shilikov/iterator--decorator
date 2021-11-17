@@ -5,7 +5,7 @@ from data.data import nested_list, nested_list_1
 
 
 print("=" * 30)
-for i in MyIterator(nested_list):
+for i in MyIterator(nested_list_1):
     print(i)
     
 
